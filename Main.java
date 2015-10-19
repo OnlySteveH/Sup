@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -13,6 +14,9 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         // Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         Group root = new Group();
+        Text txt = new Text("Sup?");
+        root.getChildren().add(txt);
+        txt.setY(50);
         primaryStage.setTitle("Sup");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
