@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -15,8 +17,12 @@ public class Main extends Application {
         // Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         Group root = new Group();
         Text txt = new Text("Sup?");
-        root.getChildren().add(txt);
+        Button btn = new Button();
+        btn.setText("Say Sup!");
         txt.setY(50);
+        VBox box = new VBox();
+        box.getChildren().addAll(txt, btn);
+        root.getChildren().add(box);
         primaryStage.setTitle("Sup");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
